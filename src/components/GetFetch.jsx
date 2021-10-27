@@ -1,6 +1,5 @@
 
 
-
   const productos= [
 
     {id:1 ,title: "agenda Liberty"    ,description: ""      ,price: 1050,img:'../assets/imagenes/agenda1.jpg ' },

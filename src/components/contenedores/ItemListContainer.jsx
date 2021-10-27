@@ -8,9 +8,9 @@ import GetFetch from '../../components/GetFetch'
  function ItemListContainer({greeting}) {
    const agregarCarrito = (final) => {alert(`La cantidad que has agregado es: ${final} ` ) } 
    const [product,setProduct] = useState ([])
-
+    console.log (product)
    useEffect(() => {
-  GetFetch
+   GetFetch
     
     .then (res => { setProduct(res)})
     .catch(err=> console.log (err))
@@ -30,6 +30,7 @@ import GetFetch from '../../components/GetFetch'
   )
 }
 export default ItemListContainer
+
 
 
 
