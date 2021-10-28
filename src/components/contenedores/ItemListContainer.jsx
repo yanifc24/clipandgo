@@ -9,8 +9,8 @@ import GetFetch from '../../components/GetFetch'
    
    const [product,setProduct] = useState ([])
     console.log (product)
-   useEffect(() => {
-   GetFetch
+    useEffect(() => {
+    GetFetch
     
     .then (res => { setProduct(res)})
     .catch(err=> console.log (err))
