@@ -21,7 +21,7 @@ import GetFetch from '../../components/GetFetch'
   return (
     <div>
          <h1>{greeting}</h1>
-        <ItemCount stock={10} initial={1} onAdd={agregarCarrito} />
+        <ItemCount  onAdd={agregarCarrito} />
         <ItemList product={product}/>
                
       
