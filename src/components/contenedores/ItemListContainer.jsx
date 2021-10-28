@@ -1,12 +1,12 @@
 
-import ItemCount from  './ItemCount'
+
 import ItemList from './ItemList'
 import {useState,useEffect} from 'react'
 import GetFetch from '../../components/GetFetch'
 
 
  function ItemListContainer({greeting}) {
-   const agregarCarrito = (final) => {alert(`La cantidad que has agregado es: ${final} ` ) } 
+   
    const [product,setProduct] = useState ([])
     console.log (product)
    useEffect(() => {
@@ -21,10 +21,8 @@ import GetFetch from '../../components/GetFetch'
   return (
     <div>
          <h1>{greeting}</h1>
-        <ItemCount  onAdd={agregarCarrito} />
+        
         <ItemList product={product}/>
-               
-      
          
     </div>
   )
