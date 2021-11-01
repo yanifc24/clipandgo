@@ -2,6 +2,7 @@
 
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/contenedores/ItemListContainer'
+import ItemDetailContainer from './components/contenedores/ItemDetailContainer';
 
 
 
@@ -12,7 +13,7 @@ function App() {
         
           <NavBar/>
           <ItemListContainer greeting='Productos'></ItemListContainer>
-         
+          <ItemDetailContainer/>
       </header>
     </div>
   );
