@@ -3,26 +3,35 @@
 import ItemList from './ItemList'
 import {useState,useEffect} from 'react'
 import GetFetch from '../../components/GetFetch'
-
+import {useParams} from 'react-router-dom'
 
  function ItemListContainer({greeting}) {
    
    const [product,setProduct] = useState ([])
-    console.log (product)
-    useEffect(() => {
-    GetFetch
-    
-    .then (res => { setProduct(res)})
-    .catch(err=> console.log (err))
-    .finally ( ()  => console.log("esto se ve"))
+   const {idCategoria} = useParams()
 
-   })
+   useEffect(() => {
+
+       if (idCategoria) {
+           GetFetch
+           .then(res => {setProduct(res.filter(prod => prod.category === idCategoria))
+           })
+           .catch (error => alert("Se ha encontrado un error:", error))
+       }
+       
+       else {
+           GetFetch
+           .then(res => { setProduct(res)})
+           .catch (error => alert("Se ha encontrado un error:", error))
+       }
+   },[idCategoria])
+   
  
   return (
     <div>
          <h1>{greeting}</h1>
         
-        <ItemList product={product}/>
+         <ItemList product={product}/>
          
     </div>
   )

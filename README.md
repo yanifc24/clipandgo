@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Clip and go
+<div id="logo" class="sinItem">
+            <a class="navbar-brand" href="index.html"><img src="../assets/imagenes/logo2.png" alt="Clipandgo" width="200px"></a>
+              
+ </div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+. Who am I?
 
-## Available Scripts
+    - My name is Yanina
 
-In the project directory, you can run:
+    - I live in the City of Buenos Aires, Argentina
 
-### `npm start`
+    - I am a Psychopedagogue and a React student.
+    
+2. Challenge
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The purpose is to create an e-commerce in which you can navigate through the different categories, select a certain product, see the detail and finally make the purchase.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+3. Product summary
 
-### `npm test`
+The project is about a bookstore located in Buenos Aires. Orders can be placed through the online store of products such as scorers, stickers, school supplies and technological items. The objective is to create a dynamic and easy-to-use proposal for users.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Dependencies
 
-### `npm run build`
+- react-bootstrap 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- react-dom: This package is used to access the DOM and the server renderers for React.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- react-router-dom: allows you to implement routing in a web application. It is based on components according to the needs of the application and the platform. In this project it is used in the navigation bar through which you can access the different categories of products as well as see the details of each one before paying for it.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Author:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Yanina Calviello
