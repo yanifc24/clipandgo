@@ -1,6 +1,6 @@
 # Clip and go
 <div id="logo" class="sinItem">
-            <a class="navbar-brand" href="index.html"><img src="../assets/imagenes/logo2.png" alt="Clipandgo" width="200px"></a>
+            <a class="navbar-brand" href="index.html"><img src="src/assets/imagenes/logo2.png" alt="Clipandgo" width="200px"></a>
               
  </div>
 
