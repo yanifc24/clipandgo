@@ -13,47 +13,70 @@ const listDetail =[
     price: 1250,
     img: '../pictures/imagenes/agenda2.JPG'},
 
-    {id:3 ,title: "Agenda School" ,
+    {id:3 ,
+    title: "Agenda School" ,
     description:  "lorem ipsum",
     price: 1000,
     img: '../pictures/imagenes/agenda3.JPG' },
 
     {id:4 ,
+    title: "Agenda School" ,
+    description: "lorem ipsum",
+     price: 1000,
+     img: '../pictures/imagenes/agenda7.JPG' },
+
+    {id:5 ,
+    title: "Agenda School" , 
+    description: "lorem ipsum",
+    price: 1000,img: '../pictures/imagenes/agenda7.JPG' },
+
+    {id:6 ,
+    title: "Agenda School" , 
+    description: "lorem ipsum",
+    price: 1000,img: '../pictures/imagenes/agenda8.JPG' },
+
+    {id:7 ,
+    title: "Agenda School" , 
+    description: "lorem ipsum",
+    price: 1000,
+    img: '../pictures/imagenes/agenda9.JPG' },
+
+    {id:8 ,
     title:  "Anotador Peace" ,
     description: "lorem ipsum",
     price: 970,
     img: '../pictures/imagenes/agenda4.JPG ' },
 
 
-    {id:5 ,
+    {id:9 ,
     title:  "Anotador Peace" ,
     description: "lorem ipsum",
     price: 310,
     img: '../pictures/imagenes/agenda4.JPG ' },
 
 
-    {id:6 ,
+    {id:10 ,
     title:  "Adhesivo" ,
     description: "lorem ipsum" ,
     price: 970,
     img: '../pictures/imagenes/agenda4.JPG ' },
 
 
-    {id:7 ,
+    {id:11 ,
     title:  "Adhesivo",
     description: "lorem ipsum" ,
     price: 970,
     img: '../pictures/imagenes/agenda4.JPG '},
 
 
-    {id:8 ,
+    {id:12 ,
     title:  "Adhesivo",
     description: "lorem ipsum" ,
     price: 970,
     img: '../pictures/imagenes/agenda4.JPG '   },
 
 
-    {id:9 ,
+    {id:13 ,
     title:  "Adhesivo" ,
     description: "lorem ipsum" ,
     price: 970,

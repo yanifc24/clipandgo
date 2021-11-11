@@ -1,19 +1,23 @@
 import React from 'react'
 import ItemCount from './ItemCount'
 import {useState} from 'react'
-// import {  useCartContext } from '../../context/CartContext'
+import {  useCartContext } from '../../context/CartContext'
 
 
 const ItemDetail = ({prod}) => {
     const [count,setCount] = useState (1)
 
-    /* const {cartList, showList, addCart}= useCartContext()
+    const {cartList, showList, addCart}= useCartContext()
     console.log (cartList)
     console.log(showList())
-     */
-    const onAdd = (cantidadAgregada) => { setCount(cantidadAgregada) }
+    console.log(count)
+     
+    const onAdd = (cantidadAgregada) => {
+         setCount(cantidadAgregada) 
+         addCart({prod, cantidad : cantidadAgregada})
+        }
 
-    console.log (count)
+    console.log (cartList)
  
     return (
         <div>

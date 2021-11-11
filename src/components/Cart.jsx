@@ -1,10 +1,16 @@
-import React from 'react'
 
-function Cart() {
+const Cart = () => {
+    
+   
     return (
+        
         <div>
-            <h1>Hola, soy cart</h1>
+            <h2>Mi carrito</h2>
         </div>
+             
+                 
+             
+           
     )
 }
 
