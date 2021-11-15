@@ -9,9 +9,11 @@ import {useParams} from 'react-router-dom'
    
    const [product,setProduct] = useState ([])
    const {idCategoria} = useParams()
-
+   const [loading, setLoading] = useState(true);
    useEffect(() => {
-
+    setTimeout(() => { setLoading (false)
+            
+    }, 2000);
        if (idCategoria) {
            GetFetch
            .then(res => {setProduct(res.filter(prod => prod.category === idCategoria))
@@ -29,10 +31,13 @@ import {useParams} from 'react-router-dom'
  
   return (
     <div>
+       
          <h1>{greeting}</h1>
-        
+         {loading
+                ? <h2 >Cargando...</h2>
+                :
          <ItemList product={product}/>
-         
+       }
     </div>
   )
 }

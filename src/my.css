@@ -8,6 +8,7 @@
    }
    .iconoCarrito {
        margin-left: 120px;
+       
      
    }
    .styleCard {
@@ -31,8 +32,11 @@
    .carritoStyle {
       padding:20px;
       text-align: center;
+      
 
    }
+ 
+  
    .buttonInfo{
      
          color:black;
@@ -46,3 +50,20 @@
  
 
   }
+  .cartwidget-quantity{
+  padding-left: 100px;
+  }
+  
+  /* cart */
+
+  .seccionCart{
+     margin: 60px;
+  }
+  .totalPrice{ 
+     margin-top: 40px;
+   margin-bottom: 80px;
+   font-size: large;
+   font-weight: bold;
+
+  }
+ 
