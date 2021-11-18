@@ -14,16 +14,30 @@ import {getFirestore} from '../../services/getFirestore'
   
 
    useEffect(() => {
-     const db = getFirestore()
-     const dbQuery= db.collection ('items').get()
-     
-     dbQuery
-     .then (resp=>setProduct(resp.docs.map(prod=>({id:prod.id, ...prod.data()}))))
-     .catch (error => alert("Se ha encontrado un error:", error))
+    const db = getFirestore() 
+        
+    if (idCategoria) {
 
-    setTimeout(() => { setLoading (false)
-            
-    }, 2000);
+        const byCategory= db.collection("items").where("category", "==",idCategoria ).get()
+
+        byCategory
+        .then(response => setProduct(response.docs.map(prod => ({id:prod.id, ...prod.data()}))))
+        .catch (error => alert("Error:", error))
+       
+    }
+
+    else {
+
+        const totalData = db.collection("items").orderBy("category").get()
+
+        totalData
+        .then(response => setProduct(response.docs.map(prod => ({id:prod.id, ...prod.data()}))))
+        .catch (error => alert("Error:", error))
+        
+    } 
+
+
+    setTimeout(() => { setLoading (false) }, 2000);
 
        /* if (idCategoria) {
            GetFetch

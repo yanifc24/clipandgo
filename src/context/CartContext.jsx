@@ -34,7 +34,7 @@ export const useCartContext = () => useContext (CartContext)
        return cartList.reduce((acumulate,prod)=> acumulate + (prod.cantidad * prod.price) , 0     )
    }
     const deleteItem = (id) => {
-        setCartList (cartList.filter(prod => prod.id !== parseInt(id) ))
+        setCartList (cartList.filter(prod => prod.id !== (id) ))
     }
     const deleteCart =() =>{
         setCartList ([])
