@@ -79,14 +79,14 @@
     {id:11,
     title:  "Adhesivo vinílico x 40ml",
     category: 'adhesivos', 
-    price: 970,
+    price: 70,
     stock:7,
     img: '../pictures/imagenes/plasticola.JPG '   },
 
     {id:12,
      title:  "Banderitas adhesivas",
      category: 'adhesivos',
-     price: 970,
+     price: 80,
      stock:10,
      img: '../pictures/imagenes/banderita.JPG '   },
 
@@ -100,7 +100,7 @@
      {id:14,
       title:  "HP Pendrive V150W USB 2.0 64GB",
       category: 'tecnología',
-      price: 970,
+      price: 450,
       stock:13,
       img: '../pictures/imagenes/pendrive.JPG '   },
  
@@ -147,7 +147,7 @@
          img: '../pictures/imagenes/tijera.JPG '   },
 
          {id:21,
-          title:  "Tijera escolar",
+          title:  "Lapicera azul",
           category: 'útiles escolares',
           price: 210,
           stock:21,
