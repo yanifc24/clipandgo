@@ -11,6 +11,10 @@
        
      
    }
+   .badgeStyle{
+      margin-left: 100px;
+   }
+
    .styleCard {
          display:flex;
          flex-direction: row;

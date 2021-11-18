@@ -9,8 +9,9 @@ return (<div  className=" styleCard">
                              <Card.Img variant="top"  src={prod.img} />
                                  <Card.Body>
                                      <h4 className="bodyStyle">{prod.category}</h4>
-                                     <h4 className="bodyStyle">{prod.id}</h4>
+                                     {/* <h4 className="bodyStyle">{prod.id}</h4> */}
                                      <h4 className="bodyStyle"><Card.Title> {prod.title}</Card.Title></h4> 
+                                     <h4 className="bodyStyle"><Card.Title> stock: {prod.stock}</Card.Title></h4> 
                                        <Card.Text>
                                              <p className="priceStyle">${prod.price}</p> 
                                              <Link as= {Link} to={`/detalle/${prod.id}` } >

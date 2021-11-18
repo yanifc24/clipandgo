@@ -25,7 +25,7 @@ const ItemDetail = ({prod}) => {
             <img width= "150px" src={prod.img} alt={prod.title} />
                 <div>
                        
-                    <h4>{prod.id}</h4>
+                    {/* <h4>{prod.id}</h4> */}
                     <h4>{prod.title}</h4>
                     <p>{prod.description}</p>
                     <p>$ {prod.price}</p>

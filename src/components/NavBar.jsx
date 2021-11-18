@@ -22,7 +22,7 @@ function NavBar() {
                 
                     <NavDropdown className="item-menu"  title="Productos" id="basic-nav-dropdown">
                        <NavDropdown.Item as= {Link} to="/categoria/agendas">Agendas</NavDropdown.Item>
-                       <NavDropdown.Item as= {Link} to="/categoria/útiles">Útiles escolares</NavDropdown.Item>
+                       <NavDropdown.Item as= {Link} to="/categoria/útiles escolares">Útiles escolares</NavDropdown.Item>
                        <NavDropdown.Item as= {Link} to="/categoria/adhesivos">Adhesivos</NavDropdown.Item>
                        <NavDropdown.Divider />
                        <NavDropdown.Item as= {Link} to="/categoria/tecnología">Tecnología</NavDropdown.Item>

@@ -5,13 +5,15 @@
 
 export const useCartContext = () => useContext (CartContext)
 
-
-
  const CartContextProvider = ({children}) => {
     const[ cartList , setCartList] = useState ([])
- 
+    
+       const totalItemCart = () => {
+        return cartList.reduce((acum,prod) => acum + prod.cantidad,0)
+    }
 
     function addToCart(item){
+
 
         const index = cartList.findIndex(elem => elem.id === item.id)
 
@@ -53,7 +55,7 @@ export const useCartContext = () => useContext (CartContext)
             deleteItem,
             deleteCart,
             addToCart,
-          
+            totalItemCart,
            }}>
 
             {children}
