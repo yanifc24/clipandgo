@@ -2,6 +2,8 @@ import React from 'react'
 import ItemCount from './ItemCount'
 import {useState} from 'react'
 import {  useCartContext } from '../../context/CartContext'
+import Card from 'react-bootstrap/Card'
+
 
 
 const ItemDetail = ({prod}) => {
@@ -22,17 +24,22 @@ const ItemDetail = ({prod}) => {
     return (
         <div>
              
-            <img width= "150px" src={prod.img} alt={prod.title} />
-                <div>
-                       
-                    {/* <h4>{prod.id}</h4> */}
-                    <h4>{prod.title}</h4>
-                    <p>{prod.description}</p>
-                    <p>$ {prod.price}</p>
-                    <ItemCount  stock={10} initial={1}  onAdd={onAdd}/>
-                    
-                </div>
-               
+            <img width= "450px" src={prod.img} alt={prod.title} />
+            <Card   style={{ width: '40rem' }} className="text-center m-5  locationCard">
+       
+                 <Card.Header> <h1>{prod.id}</h1></Card.Header>
+                 <Card.Body>
+                    <Card.Title><h2>{prod.title}</h2></Card.Title>
+                    <Card.Text>
+                         <p>{prod.description}</p>
+                         <h3 className="alignCount"><ItemCount  stock={10} initial={1}  onAdd={onAdd}/></h3>
+                    </Card.Text>
+   
+            </Card.Body>
+            
+            </Card>
+                
+                
             
         </div>
     )

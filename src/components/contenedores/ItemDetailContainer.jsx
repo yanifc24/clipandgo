@@ -4,6 +4,7 @@ import { useState,useEffect } from 'react'
 // import GetFetchUnit from '../GetFetchUnit'
 import {useParams} from 'react-router-dom'
 import {getFirestore} from '../../services/getFirestore'
+import { Spinner } from 'react-bootstrap'
 
 const ItemDetailContainer = () => {
     const [prod,setProd] = useState ({})
@@ -32,7 +33,11 @@ const ItemDetailContainer = () => {
     return (
         <div>
             {loading
-                ? <h2 >Cargando...</h2>
+                ? 
+                <div>
+                    <h2 >Loading...</h2>
+                    <Spinner animation="grow" variant="warning" />
+                </div>
                 :
             <ItemDetail prod = {prod} />
 }

@@ -6,19 +6,12 @@
    .item-menu {
       margin-left:40px;
    }
-   .iconoCarrito {
-       margin-left: 120px;
-       
-     
-   }
-   .badgeStyle{
-      margin-left: 100px;
-   }
+  
 
    .styleCard {
          display:flex;
          flex-direction: row;
-         margin:10px;
+         margin: 40px;
          padding:15px;
          border-radius:20px;
        
@@ -39,25 +32,47 @@
       
 
    }
- 
-  
-   .buttonInfo{
-     
-         color:black;
-         background-color: white;
-         border-style:double 10px;
-         padding:10px;
-        
-     
-   }
-  .cartItemImg{ width: 130px;
- 
 
-  }
-  .cartwidget-quantity{
-  padding-left: 100px;
-  }
+ .badgeStyle {
+    color: rgb(235, 230, 230);
+    font-size:18;
+    border-radius:10px;
+
   
+ 
+} 
+  
+  
+  .cartItemImg{ width: 130px;position:relative;}
+
+  .cartwidget-container {
+    
+    padding-left: 60px;}
+
+  .item-container {
+   
+   display: grid; 
+   grid-template-columns: 1fr 1fr 1fr; 
+   grid-template-rows: 1fr 1fr 1fr 1fr; 
+   gap: 0px 0px; 
+   grid-template-areas: 
+     ". . ."
+     ". . ."
+     ". . ."
+     ". . ."; 
+ }
+
+/* Detail */
+
+/* .locationCard{ 
+  display:flex;
+  align-content: flex-end;
+  justify-content: flex-end;
+} */
+.alignCount{
+  display:flex;
+  justify-content: center;
+}
   /* cart */
 
   .seccionCart{
@@ -70,4 +85,72 @@
    font-weight: bold;
 
   }
+  .filled-cart {
+    margin:10px;
+    padding:15px;
+    border-radius:30px;
+    border-style:dashed;
+    border-color:#ceee5d;
+}
+
+.not-filled-cart {
+    display:none;
+}
+
+/* Loading  */
+  .lds-ellipsis {
+   display: inline-block;
+   position: relative;
+   width: 80px;
+   height: 80px;
+ }
+ .lds-ellipsis div {
+   position: absolute;
+   top: 33px;
+   width: 13px;
+   height: 13px;
+   border-radius: 50%;
+   background: rgb(166, 214, 88);
+   animation-timing-function: cubic-bezier(0, 1, 1, 0);
+ }
+ .lds-ellipsis div:nth-child(1) {
+   left: 8px;
+   animation: lds-ellipsis1 0.6s infinite;
+ }
+ .lds-ellipsis div:nth-child(2) {
+   left: 8px;
+   animation: lds-ellipsis2 0.6s infinite;
+ }
+ .lds-ellipsis div:nth-child(3) {
+   left: 32px;
+   animation: lds-ellipsis2 0.6s infinite;
+ }
+ .lds-ellipsis div:nth-child(4) {
+   left: 56px;
+   animation: lds-ellipsis3 0.6s infinite;
+ }
+ @keyframes lds-ellipsis1 {
+   0% {
+     transform: scale(0);
+   }
+   100% {
+     transform: scale(1);
+   }
+ }
+ @keyframes lds-ellipsis3 {
+   0% {
+     transform: scale(1);
+   }
+   100% {
+     transform: scale(0);
+   }
+ }
+ @keyframes lds-ellipsis2 {
+   0% {
+     transform: translate(0, 0);
+   }
+   100% {
+     transform: translate(24px, 0);
+   }
+ }
  

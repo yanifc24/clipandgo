@@ -34,22 +34,10 @@ import {getFirestore} from '../../services/getFirestore'
         .then(response => setProduct(response.docs.map(prod => ({id:prod.id, ...prod.data()}))))
         .catch (error => alert("Error:", error))
         
-    } 
-
+    }
 
     setTimeout(() => { setLoading (false) }, 2000);
 
-       /* if (idCategoria) {
-           GetFetch
-           .then(res => {setProduct(res.filter(prod => prod.category === idCategoria))
-           })
-           .catch (error => alert("Se ha encontrado un error:", error))
-       }
-       else {
-           GetFetch
-           .then(res => { setProduct(res)})
-           .catch (error => alert("Se ha encontrado un error:", error))
-       } */
    },[idCategoria])
  
   return (
@@ -57,8 +45,10 @@ import {getFirestore} from '../../services/getFirestore'
        
          <h1>{greeting}</h1>
          {loading
-                ? <h2 >Cargando...</h2>
+                ? <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+               
                 :
+                
          <ItemList product={product}/>
        }
     </div>

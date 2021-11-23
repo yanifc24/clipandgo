@@ -27,17 +27,18 @@ function ItemCount({stock,initial,onAdd}) {
     return (
         <div>
             
-            <InputGroup className="mb-3">
-                <Button variant="outline-primary" onClick = {subtraction}> - </Button> 
+            <InputGroup className="mb-3" style={{ width: '9rem' }}>
+                <Button className="buttonControl" variant="outline-primary" onClick = {subtraction}  > - </Button> 
                 <FormControl className="text-center" aria-label="Example text with two button addons" value={count}/>
-                <Button variant="outline-primary" onClick = {addition}> + </Button>
+                <Button className="buttonControl" variant="outline-primary" onClick = {addition} > + </Button>
             </InputGroup>
+
              {changeButtom ?
              <Link to="/cart" >
                 <Button variant="primary" >Finalizar compra</Button>
              </Link> 
              
-             :
+                 :
              <Button variant="primary" onClick={onAddHandler}>Agregar al carrito</Button> }
             
             
