@@ -13,7 +13,8 @@
           
             <img  src= {carrito} width= "32px" className="iconoCarrito" alt="carrito de compras"/>
          
-             <Badge pill variant="info"className="badgeStyle">{totalItemCart()}</Badge>{' '}
+           <Badge className="badgeStyle badge badge-pill badge-default"  rounded-pill  >{totalItemCart()}</Badge>{' '}
+          
          
             
         </Link>

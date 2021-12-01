@@ -1,4 +1,3 @@
-
 import {Link} from "react-router-dom";
 import { useCartContext } from "../context/CartContext"; 
 import Button from 'react-bootstrap/Button';
@@ -7,6 +6,7 @@ import {useState} from 'react';
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import {getFirestore} from '../services/getFirestore';
+
 
 const Cart = () => {
      const [orderId, setOrderId] = useState("");
@@ -71,97 +71,92 @@ const Cart = () => {
         
         <div className="seccionCart">
              <div>
-                 <h2 >Mi carrito</h2>
+                 <h2>Mi carrito</h2>
              </div>
-             {cartList.length ? 
-             <Table>
-                 <thead >
-                      <tr className= "text-center">
+            
+             <Table className="container-fluid  tablaCompra" hidden={cartList.length > 0 ? false : true}>
+                 <thead>
+                      <tr className=" text-center">
                          <th>Id del producto</th>
                          <th>Nombre del producto</th>
-                         <th>Descripición</th>
                          <th>Cantidad</th>
-                         <th >Precio</th>
+                         <th>Precio</th>
                      </tr>
                  </thead>
-             </Table> 
-              
-              :
-             <div>
-                <Link className="go-to-home" to="/"> Ir al inicio</Link>
-                
-             </div>}      
+  
+            <tbody>
+               {cartList.map( cartItem => 
+
                
-            {cartList.map(
-                cartItem => 
-            
-                 <div key={cartItem.id} >
-                
-                  <Table>     
-                      <tbody >
-                         <tr className="p-3 m-3 text-center shadow">
+                          <tr className="p-3 m-2 text-center shadow" key={cartItem.id} >
                              <td><p>{cartItem.id}</p></td>
-                             <td> <h5 >{cartItem.title}</h5><img className= "cartItemImg" src={cartItem.img} alt="imagen"/></td>
-                             <td><p>{cartItem.description}</p></td>
-                             <td><p>{cartItem.cantidad}</p></td>
+                             <td> <h5 >{cartItem.title}</h5><img className= "cartItemImg " src={cartItem.img} alt="imagen"/></td>
+                             <td><p> {cartItem.cantidad}</p></td>
+                            
                              <td>
                                  <p>$ {cartItem.price}</p>
-                                 <p onClick={() => deleteItem(cartItem.id)}><img src='../pictures/imagenes/delete.png'  alt="delete" width= "32px"/>
+                                 <p onClick={() => deleteItem(cartItem.id)}> <img src='../pictures/imagenes/delete.png' className="deleteIcon" alt="delete" width= "32px"/>
+                                   
                                  </p>
                                  <p> Subtotal: $ {cartItem.price * cartItem.cantidad}</p>
-                             </td> 
-                         </tr>
-                       </tbody>
-                 </Table>       
-                    
-                </div> )} 
-                
-
+                             </td>  
+                         </tr>)} 
+             </tbody>
+                            
+               
+             </Table>       
             
                 {cartList.length
             ? <div>
-               <Button variant="warning" onClick={() => deleteCart()}>Vaciar carrito</Button>
-                <p className="totalPrice">{`Precio Final: $ ${totalPrice()} `}</p>
+                 <Button variant="warning" onClick={() => deleteCart()}>Vaciar carrito</Button>
+                 <p className="totalPrice">{`Precio Final: $ ${totalPrice()} `}</p>
              </div> 
             
-            : orderId===""
-                ? <div>
+               : orderId===""
+                ? 
+             <div>
              
-                
+                 <div className="cartVacio">
+                     <p>No hay productos en tu carrito de compras</p>
+                     <p>Te pedimos que vuelvas a intentarlo ingresando aquí.</p>
+                     <Link to="/">
+                         <p>Ir al inicio</p>
+                     </Link>
                 </div>
-                : <div>
-                <p>La operación ha sido exitosa</p>
-                <p >¡Gracias por su compra!</p>
-                <p>Tu código de operación es: {orderId}</p>
+            </div>
+                : 
+                <div className="compraExitosa">
+                     <p>La operación ha sido exitosa</p>
+                     <p>¡Gracias por su compra!</p>
+                     <p>Tu código de operación es: {orderId}</p>
                 
                 </div>
             }
             <div className=
-                {cartList.length
-                ? "filled-cart"
-                : "not-filled-cart" } > 
+                {cartList.length ? "filled-cart"  : "not-filled-cart" } > 
            
 
             <form onSubmit={generateOrder} onChange={handleChange}>
                     <legend className="form-legend">Ingresá tus datos</legend>
                     <div>
-                        <label htmlFor="name" className="form-label">Nombre</label>
-                        <input type="text" name="nombre" placeholder="Juan" defaultValue={formData.nombre}/>
+                    <hr/>
+                        <label htmlFor="name" className="form-label formSpace"></label>
+                        <input type="text" required name="nombre" placeholder="Nombre" defaultValue={formData.nombre}/>
                     </div>
                     <div>
-                        <label htmlFor="surname" className="form-label">Apellido</label>
-                        <input type="text" name="apellido" placeholder="Pérez" defaultValue={formData.apellido}/>
+                        <label htmlFor="surname" className="form-label formSpace"></label>
+                        <input type="text" required name="apellido" placeholder="Apellido" defaultValue={formData.apellido}/>
                     </div>
                     <div>
-                        <label htmlFor="phone" className="form-label">Teléfono</label>
-                        <input type="text" name="telefono" placeholder="3492123456" defaultValue={formData.telefono}/> 
+                        <label htmlFor="phone" className="form-label formSpace"></label>
+                        <input type="text" required name="telefono" placeholder="Teléfono" defaultValue={formData.telefono}/> 
                         <p>Ingresá tu número de celular con el código de área, sin el 0 ni el 15.</p>
                     </div>
                     <div>
-                        <label htmlFor="email" className="form-label">Email</label>
-                        <input type="email" name="email" placeholder="ejemplo@tuemail.com" defaultValue={formData.email}/>
+                        <label htmlFor="email" className="form-label formSpace"></label>
+                        <input type="email" required name="email" placeholder="Email" defaultValue={formData.email}/>
                     </div>
-                    <button>COMPRAR</button>
+                    <button className="buttonGrey">COMPRAR</button>
                 </form>
 
         </div>

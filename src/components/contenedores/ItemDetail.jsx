@@ -1,9 +1,8 @@
 import React from 'react'
 import ItemCount from './ItemCount'
 import {useState} from 'react'
-import {  useCartContext } from '../../context/CartContext'
+import { useCartContext } from '../../context/CartContext'
 import Card from 'react-bootstrap/Card'
-
 
 
 const ItemDetail = ({prod}) => {
@@ -22,17 +21,24 @@ const ItemDetail = ({prod}) => {
     console.log (cartList)
  
     return (
-        <div>
+        <div className= "detailCard">
              
-            <img width= "450px" src={prod.img} alt={prod.title} />
-            <Card   style={{ width: '40rem' }} className="text-center m-5  locationCard">
-       
-                 <Card.Header> <h1>{prod.id}</h1></Card.Header>
+             <img className="imgDetail"   src={prod.img} alt={prod.title} />
+            <Card    className="text-center m-5  tamañoDetailCard">
+              
+                 <Card.Header className="colorTitle"> <h1 className="fontTitle">{prod.title}</h1></Card.Header>
                  <Card.Body>
-                    <Card.Title><h2>{prod.title}</h2></Card.Title>
+                    <Card.Title><h2 hidden className="idStyle">Id del producto: {prod.id}</h2></Card.Title>
                     <Card.Text>
                          <p>{prod.description}</p>
-                         <h3 className="alignCount"><ItemCount  stock={10} initial={1}  onAdd={onAdd}/></h3>
+                          
+                                  
+                        <h3 className="alignCount"><ItemCount  stock={prod.stock} initial={1}  onAdd={onAdd}/></h3>
+                                 
+
+                                  
+                         
+                      
                     </Card.Text>
    
             </Card.Body>

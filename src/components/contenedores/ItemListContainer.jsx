@@ -2,9 +2,10 @@
 
 import ItemList from './ItemList'
 import {useState,useEffect} from 'react'
-// import GetFetch from '../../components/GetFetch'
 import {useParams} from 'react-router-dom'
 import {getFirestore} from '../../services/getFirestore'
+import { Row } from 'react-bootstrap'
+import { Col } from 'react-bootstrap'
 
  function ItemListContainer({greeting}) {
    
@@ -41,17 +42,27 @@ import {getFirestore} from '../../services/getFirestore'
    },[idCategoria])
  
   return (
-    <div>
-       
-         <h1>{greeting}</h1>
-         {loading
-                ? <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+    <Row className="mx-0" >
+    <Col  className="mt-5 text-center" >
+      <div className="locationContainer" >
+ 
+         <h1 className="catalogo">{greeting}</h1> 
+         <div className="locationSpinner">
+           {loading
+                ?   
+                <div class="loadingio-spinner-pulse-ktrp39q1bi"><div class="ldio-jh9967c90a">
+                <div></div><div></div><div></div>
+                </div></div>
                
                 :
                 
          <ItemList product={product}/>
        }
+        
+        </div>
     </div>
+    </Col>
+    </Row>
   )
 }
 export default ItemListContainer

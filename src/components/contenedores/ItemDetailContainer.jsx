@@ -1,10 +1,9 @@
 import React from 'react'
 import ItemDetail from './ItemDetail'
 import { useState,useEffect } from 'react'
-// import GetFetchUnit from '../GetFetchUnit'
 import {useParams} from 'react-router-dom'
 import {getFirestore} from '../../services/getFirestore'
-import { Spinner } from 'react-bootstrap'
+
 
 const ItemDetailContainer = () => {
     const [prod,setProd] = useState ({})
@@ -23,22 +22,21 @@ const ItemDetailContainer = () => {
 
         setTimeout(() => { setLoading (false)
         }, 2000);
-      /*   GetFetchUnit
-        .then(res => {setProd(res.find(prod => prod.id === parseInt(id) ))
-        
-         })
-        .catch (error => alert("Esto es un error:", error)) */
+      
     },[id])  
     console.log (prod)
     return (
         <div>
             {loading
                 ? 
-                <div>
-                    <h2 >Loading...</h2>
-                    <Spinner animation="grow" variant="warning" />
+                <div className="locationSpinner">
+                    <div class="loadingio-spinner-pulse-ktrp39q1bi"><div class="ldio-jh9967c90a">
+                    <div></div><div></div><div></div>
+                    </div></div>
                 </div>
+                
                 :
+
             <ItemDetail prod = {prod} />
 }
         </div>

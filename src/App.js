@@ -16,7 +16,7 @@ function App() {
                 <NavBar/> 
                 <Switch>
                    <Route exact path='/' >
-                       <ItemListContainer greeting='Productos'/>
+                       <ItemListContainer />
                    </Route>
                    <Route exact path='/categoria/:idCategoria'>
                        <ItemListContainer/>
