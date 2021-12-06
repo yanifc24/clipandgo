@@ -16,7 +16,7 @@ function NavBar() {
                <Navbar.Brand as= {Link} to="/"><img src= {Logo22}  className="App-logo" alt="logo" width= "160px"/></Navbar.Brand>
                  <Navbar.Toggle aria-controls="basic-navbar-nav" />
                  <Navbar.Collapse id="basic-navbar-nav">
-                  <Nav className="me-auto">
+                  <Nav className="me-auto menu">
                     <Nav.Link className="item-menu" as= {Link} to="/">Inicio</Nav.Link>
                     <NavDropdown className="item-menu"  title="Productos" id="basic-nav-dropdown">
                        <NavDropdown.Item as= {Link} to="/categoria/agendas">Agendas</NavDropdown.Item>
@@ -25,16 +25,13 @@ function NavBar() {
                        <NavDropdown.Divider />
                        <NavDropdown.Item as= {Link} to="/categoria/tecnología">Tecnología</NavDropdown.Item>
                     </NavDropdown>
-                  <Nav.Link className="item-menu"  href="#link">Contacto</Nav.Link>
-                  <Nav.Link as= {Link} to="/cart"><CartWidget/></Nav.Link> 
-               </Nav>
-      
+                  </Nav>
                </Navbar.Collapse>
+               <Nav.Link as= {Link} to="/cart"><CartWidget/></Nav.Link> 
              </Container>
-  
             </Navbar>
 
-
+       
             
         </div>
     )

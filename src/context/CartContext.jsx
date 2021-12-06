@@ -3,25 +3,28 @@
 
  const CartContext = createContext ()
 
-export const useCartContext = () => useContext (CartContext)
 
- const CartContextProvider = ({children}) => {
-    const[ cartList , setCartList] = useState ([])
-    
-       const totalItemCart = () => {
-        return cartList.reduce((acum,prod) => acum + prod.cantidad,0)
+   export const useCartContext = () => useContext (CartContext)
+
+     const CartContextProvider = ({children}) => {
+
+     const[ cartList , setCartList] = useState ([])
+     const [formData, setFormData] = useState({nombre:"", apellido:"", telefono:"", email:"", emailvalidation:""});
+
+    const totalItemCart = () => {
+        return cartList.reduce((acum,prod) => acum + prod.quantity,0)
     }
 
     function addToCart(item){
 
 
-        const index = cartList.findIndex(elem => elem.id === item.id)
+    const index = cartList.findIndex(elem => elem.id === item.id)
 
         if (index > -1) {
-            const oldQuantity = cartList[index].cantidad
+            const oldQuantity = cartList[index].quantity
 
             cartList.splice(index, 1)
-            setCartList([...cartList, {...item, cantidad: item.cantidad + oldQuantity }])
+            setCartList([...cartList, {...item, quantity: item.quantity + oldQuantity }])
         }
         else {
             setCartList([...cartList, item])
@@ -31,7 +34,7 @@ export const useCartContext = () => useContext (CartContext)
     
    const totalPrice =() => {
 
-       return cartList.reduce((acumulate,prod)=> acumulate + (prod.cantidad * prod.price) , 0     )
+       return cartList.reduce((acumulate,prod)=> acumulate + (prod.quantity * prod.price) , 0     )
    }
     const deleteItem = (id) => {
         setCartList (cartList.filter(prod => prod.id !== (id) ))
@@ -43,19 +46,26 @@ export const useCartContext = () => useContext (CartContext)
         setCartList([...cartList,items])
     }
 
-    const showList = () => {
-         console.log (cartList)
-     }
+    const handleChange = (e) => {
+        setFormData ({
+            ...formData, 
+            [e.target.name]: e.target.value
+        })
+    }
+   
+   
     return (
         <CartContext.Provider value={{
             cartList, 
-            showList,
+          
             addCart,
             totalPrice,
             deleteItem,
             deleteCart,
             addToCart,
             totalItemCart,
+            handleChange,
+            formData
            }}>
 
             {children}
