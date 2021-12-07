@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Button from'react-bootstrap/Button';
 import InputGroup from'react-bootstrap/InputGroup';
 import FormControl from'react-bootstrap/FormControl';
-import {Link}from 'react-router-dom'
+import {Link}from 'react-router-dom';
 import Swal from 'sweetalert2';
 import 'animate.css';
 
@@ -38,12 +38,12 @@ function ItemCount({stock,initial,onAdd}) {
 
     return (
         <div>
-            <InputGroup className="mb-3" style={{ width: '9rem' }}>
+            <InputGroup className="mb-3 marginCount" style={{ width: '9rem' }}>
                 <button className="buttonControl pink"  onClick = {subtraction} disabled={count<1} > - </button> 
                 <FormControl className="text-center" aria-label="Example text with two button addons" value={count} onChange={e => setCount(e.target.value)} />
                 <button className="buttonControl pink"  onClick = {addition} disabled={count>=stock} > + </button>
             </InputGroup>
-
+      
              {changeButtom ?
               <div className="bodyStyle">
                 <div>
@@ -59,10 +59,10 @@ function ItemCount({stock,initial,onAdd}) {
                  </div>
                    :
                  <div>
-                     <button className= "addPink "  onClick={onAddHandler}>Agregar al carrito</button>
+                     <button className= "addPink" onClick={onAddHandler}>Agregar al carrito</button>
                 </div> 
-                      
-                    }    
+                 
+                    }   
         </div>
     )
 }

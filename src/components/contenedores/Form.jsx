@@ -5,6 +5,7 @@ const Form = ({generateOrder}) =>{
 const {handleChange, formData} = useCartContext();
 
 return(
+    <div>
     <form className="formWidth" onChange={handleChange}  onSubmit={(e) => {
      e.preventDefault()
             formData.email === formData.emailValidation  ? generateOrder()
@@ -12,9 +13,10 @@ return(
              Swal.fire({
                     icon: 'error',
                     title: 'Oops...',
-                    text: 'Los correos electrónicos no son idénticos. Intente de nuevo',
+                    text: 'Los correos electrónicos no son idénticos. Intente de nuevo.',
                   })
        }}>
+        
         <legend className="form-legend">Ingresá tus datos</legend>
         <div>
         <hr/>
@@ -38,7 +40,8 @@ return(
              <input type="email" name="emailValidation" placeholder="ejemplo@tuemail.com" defaultValue={formData.emailValidation} required/> 
         </div>
         <button className="buttonGrey">COMPRAR</button>
-
-    </form>)}
-
+    </form>
+    </div>  )
+    }
+ 
   export default Form

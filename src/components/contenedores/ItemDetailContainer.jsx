@@ -1,8 +1,8 @@
-import React from 'react'
-import ItemDetail from './ItemDetail'
-import { useState,useEffect } from 'react'
-import {useParams} from 'react-router-dom'
-import {getFirestore} from '../../services/getFirestore'
+import React from 'react';
+import ItemDetail from './ItemDetail';
+import { useState,useEffect } from 'react';
+import {useParams} from 'react-router-dom';
+import {getFirestore} from '../../services/getFirestore';
 
 const ItemDetailContainer = () => {
     const [prod,setProd] = useState ({})
@@ -33,7 +33,7 @@ const ItemDetailContainer = () => {
                     </div></div>
                 </div>
                 :
-            <ItemDetail prod = {prod} />}
+            <ItemDetail  prod = {prod} />}
         </div>
     )
 }

@@ -35,7 +35,8 @@ The project is about a bookstore located in Buenos Aires. Orders can be placed t
 - Firebase: "^8.9.1",It is a mobile platform created by Google, whose main function is to develop and facilitate the creation of high-quality apps quickly. In my firebase are the items and orders that users make when making the purchase. It also allows you to control the stock, add products and make changes to their characteristics.
 
 4. Demo
-https://clipandgo.netlify.app/
+https://clipandgo.netlify.app
+
 
 
 Author:

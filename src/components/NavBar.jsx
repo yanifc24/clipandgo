@@ -1,16 +1,15 @@
 import React from 'react'
 import Nav from 'react-bootstrap/Nav';
-import NavDropdown from 'react-bootstrap/NavDropdown'
-import Navbar from 'react-bootstrap/Navbar'
-import Container from 'react-bootstrap/Container'
-import Logo22 from '../assets/imagenes/logo22.png'
-import CartWidget from '../components/CartWidget'
-import {Link} from 'react-router-dom'
-
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
+import Logo22 from '../assets/imagenes/logo22.png';
+import CartWidget from '../components/CartWidget';
+import {Link} from 'react-router-dom';
 
 function NavBar() {
     return (
-        <div>
+       <div>
             <Navbar className="colorTitle" expand="lg">
              <Container>
                <Navbar.Brand as= {Link} to="/"><img src= {Logo22}  className="App-logo" alt="logo" width= "160px"/></Navbar.Brand>
@@ -29,11 +28,8 @@ function NavBar() {
                </Navbar.Collapse>
                <Nav.Link as= {Link} to="/cart"><CartWidget/></Nav.Link> 
              </Container>
-            </Navbar>
-
-       
-            
-        </div>
+            </Navbar> 
+      </div>
     )
 }
 

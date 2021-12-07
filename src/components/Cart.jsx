@@ -8,7 +8,6 @@ import 'firebase/firestore';
 import {getFirestore} from '../services/getFirestore';
 import Form from "./contenedores/Form";
 
-
 const Cart = () => {
      const [orderId, setOrderId] = useState("");
      const {cartList, totalPrice, deleteItem,formData, deleteCart} = useCartContext()
@@ -76,14 +75,13 @@ const Cart = () => {
                                      <p> Subtotal: $ {cartItem.price * cartItem.quantity}</p>
                                   </td>  
                            </tr>)} 
-                   </tbody>
-                            
+                   </tbody>     
                 </Table>       
             
                 {cartList.length ? 
                  <div>
-                         <Button variant="warning" onClick={() => deleteCart()}>Vaciar carrito</Button>
-                         <p className="totalPrice">{`Precio Final: $ ${totalPrice()} `}</p>
+                     <Button variant="warning" onClick={() => deleteCart()}>Vaciar carrito</Button>
+                     <p className="totalPrice">{`Precio Final: $ ${totalPrice()} `}</p>
                  </div> 
             
                : orderId=== ""
@@ -93,7 +91,7 @@ const Cart = () => {
                       <p>No hay productos en tu carrito de compras</p>
                        <p>Te pedimos que vuelvas a intentarlo ingresando aquí.</p>
                      <Link to="/">
-                         <h5>Ir al inicio</h5>
+                         <h5>Inicia tu compra</h5>
                      </Link>
                 </div>
             </div>

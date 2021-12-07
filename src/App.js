@@ -4,8 +4,7 @@ import ItemListContainer from './components/contenedores/ItemListContainer'
 import ItemDetailContainer from './components/contenedores/ItemDetailContainer';
 import { BrowserRouter,Switch,Route } from 'react-router-dom';
 import Cart from './components/Cart';
- import CartContextProvider from './context/CartContext';
-
+import CartContextProvider from './context/CartContext';
 
 function App() {
   return (
@@ -29,10 +28,7 @@ function App() {
                    </Route>
                 </Switch>
              </BrowserRouter>
-             
            </CartContextProvider> 
-
-          
       </header>
     </div>
   );

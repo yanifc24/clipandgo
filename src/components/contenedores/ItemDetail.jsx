@@ -1,8 +1,8 @@
-import React from 'react'
-import ItemCount from './ItemCount'
-import {useState} from 'react'
-import { useCartContext } from '../../context/CartContext'
-import Card from 'react-bootstrap/Card'
+import React from 'react';
+import ItemCount from './ItemCount';
+import {useState} from 'react';
+import { useCartContext } from '../../context/CartContext';
+import Card from 'react-bootstrap/Card';
 
 const ItemDetail = ({prod}) => {
     const [count,setCount] = useState (1)
@@ -15,7 +15,7 @@ const ItemDetail = ({prod}) => {
 
     return (
         <div className= "detailCard">
-              <img className="imgDetail"   src={prod.img} alt={prod.title} />
+              <img className="imgDetail"  style={{ minWidth: '15rem', maxWidth: '25rem', minHeight: '16rem', maxHeight: '26rem' }} src={prod.img} alt={prod.title} />
               <Card className="text-center m-5  sizeDetailCard">
                   <Card.Header className="colorTitle"> <h1 className="fontTitle">{prod.title}</h1></Card.Header>
                   <Card.Body>
@@ -24,11 +24,11 @@ const ItemDetail = ({prod}) => {
                          {prod.description}
                        </Card.Title>   
                        <Card.Title className="alignCount">       
-                         <ItemCount  stock={prod.stock} initial={count}  onAdd={onAdd}/> 
+                         <ItemCount stock={prod.stock} initial={count}  onAdd={onAdd}/> 
                        </Card.Title>
                    </Card.Body>
                 </Card> 
-        </div>
+          </div>
     )
 }
 

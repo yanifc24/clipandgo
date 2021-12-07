@@ -1,14 +1,12 @@
 
  import {createContext, useState,useContext} from  'react'
-
  const CartContext = createContext ()
 
-
-   export const useCartContext = () => useContext (CartContext)
+ export const useCartContext = () => useContext (CartContext)
 
      const CartContextProvider = ({children}) => {
 
-     const[ cartList , setCartList] = useState ([])
+     const [cartList , setCartList] = useState ([])
      const [formData, setFormData] = useState({nombre:"", apellido:"", telefono:"", email:"", emailvalidation:""});
 
     const totalItemCart = () => {
@@ -16,13 +14,10 @@
     }
 
     function addToCart(item){
-
-
     const index = cartList.findIndex(elem => elem.id === item.id)
 
         if (index > -1) {
             const oldQuantity = cartList[index].quantity
-
             cartList.splice(index, 1)
             setCartList([...cartList, {...item, quantity: item.quantity + oldQuantity }])
         }
@@ -30,10 +25,7 @@
             setCartList([...cartList, item])
         }
     }
-
-    
    const totalPrice =() => {
-
        return cartList.reduce((acumulate,prod)=> acumulate + (prod.quantity * prod.price) , 0     )
    }
     const deleteItem = (id) => {
@@ -53,11 +45,9 @@
         })
     }
    
-   
     return (
         <CartContext.Provider value={{
             cartList, 
-          
             addCart,
             totalPrice,
             deleteItem,
@@ -67,7 +57,6 @@
             handleChange,
             formData
            }}>
-
             {children}
         </CartContext.Provider>
     )
