@@ -14,8 +14,8 @@ const ItemDetail = ({prod}) => {
         }
 
     return (
-        <div className= "detailCard">
-              <img className="imgDetail"  style={{ minWidth: '15rem', maxWidth: '25rem', minHeight: '16rem', maxHeight: '26rem' }} src={prod.img} alt={prod.title} />
+          <div className= "detailCard">
+              <img className="imgDetail"  style={{ minWidth: '6rem', maxWidth: '25rem', minHeight: '8rem', maxHeight: '26rem' }} src={prod.img} alt={prod.title} />
               <Card className="text-center m-5  sizeDetailCard">
                   <Card.Header className="colorTitle"> <h1 className="fontTitle">{prod.title}</h1></Card.Header>
                   <Card.Body>

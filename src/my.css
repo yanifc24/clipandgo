@@ -40,6 +40,12 @@
     padding-top: 25px;
     color: #5c5454;
   }
+  .catalogoDos {
+    font-size:35px;
+    padding-top: 35px;
+    padding-bottom:5px;
+    color: #5c5454;
+  }
   .fontTitle{
      font-size: 23px;
      font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -83,21 +89,22 @@
 /* Media queries detailCard */
 
 @media (max-width: 480px) {
+  .imgDetail{
+    width:200px;}
+
 .styleCard{
-  margin-left: 40px;}
+  margin-left: 30px;}
 
 .cardForm{
-  width:15rem;}
+  width:16rem;}
 
 .detailCard{
   width: 16rem;
   display:none;
   flex-wrap: wrap;
- justify-content: center;
-
+ flex-direction:column;
+ align-items:center;
 }
-.imgDetail{
-  width:200px;}
 
 }
 
@@ -221,6 +228,11 @@
 @media (max-width:480px) {
   .catalogo{ 
     font-size:22px;
+  }
+  .catalogoDos{
+    font-size:22px;
+    margin-bottom: -75px;
+
   }
 }
   @media (min-width:481px) {

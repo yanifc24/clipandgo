@@ -26,7 +26,7 @@ import { Col } from 'react-bootstrap';
     <Row className="mx-0" >
        <Col className="mt-5 text-center" >
            <h1 className="catalogo">Bienvenidos</h1>  
-           <h2 className="catalogo">Nuestros productos</h2> 
+           <h2 className="catalogoDos">Nuestros productos</h2> 
            <div className="locationSpinner">
            {loading
                 ?   
